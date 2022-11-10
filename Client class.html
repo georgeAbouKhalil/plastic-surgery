@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style>
+    p{
+        font-size: 16px;
+    }
+</style>
+</head>
+<body>
+    <script>
+        class Client {
+                constructor(fullName, id, gender, age) {
+                    this.setFullName = fullName
+                    this.setId = id
+                    this.setGender = gender
+                    this.setAge = age
+                }
+                set setFullName(n) {
+                var checkFullName = /^[A-Za-z]{3,}$/  // 1
+                 if(checkFullName.test(n)){
+                this.fullName = n;  
+               }
+               else{
+                   alert("the full name is wrong U will get undefined ")
+                    }
+                }
+                set setId(t){
+                var checkID = /^\d{9}$/ //2
+                if(checkID.test(t)){
+                    this.id = t;
+                }
+                else{
+                    alert("the ID is wrong u will get undefined ")
+                }
+                }
+                
+                set setGender(d){
+                var checkGenders = /^male|female\b/ig //3
+                if(checkGenders.test(d)){
+                    this.gender = d;
+                }
+                else{
+                    alert("u Dont choce male or female U will get undefined")
+                    }
+                }
+
+                set setAge(a){
+                    this.age = a;
+                }
+                get getFullName() {
+                    return this.fullName;
+                }
+                get getId() {
+                    return this.id;
+                }
+                get getGender() {
+                    return this.gender;
+                }
+                get getage(){
+                    return this.age;
+                }
+                 toString() {
+                 return "<font size='5'>The client full name is  [" + this.fullName + "] the id of the client [" + this.id + "]  the gender is [" 
+                    + this.gender + "] "+" and the is age "+this.age;
+                }
+            }
+
+            function check(form)  {
+                var t = new Client( form.fullName.value , form.id.value , form.gender.value , form.age.value)
+                
+                document.write(t)
+                
+            }
+          
+        </script>
+    
+    </form>
+    <h1 class="text-center bg-dark text-white">Client form</h1>
+    <div class="container">
+        <br>
+        <form name="form" onsubmit="return check(form)">
+            <div class="form-group">
+                <label>full Name</label>
+                <input id="name" type="text" placeholder="fullName" name="fullName" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>ID</label>
+                <input id="name" type="text" placeholder="id" name="id" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>Gender</label>
+                <input id="name" type="text" placeholder="gender" name="gender" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>Age</label>
+                <input id="name" type="text" placeholder="age" name="age" class="form-control">
+            </div>
+            <input type="submit" name="" class="btn btn-primary">
+        </form>
+    </div>
+</body>
+</html>

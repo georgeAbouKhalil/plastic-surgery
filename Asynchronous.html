@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+<script>
+    var george = () => console.log('george');
+    var josh = () => console.log('josh');
+    var david = () => {
+        console.log('david')
+        setTimeout(george,0)
+        josh();
+    }
+    david();
+</script>
+<h1>Asynchronous in the console.log</h1>
+</body>
+</html>

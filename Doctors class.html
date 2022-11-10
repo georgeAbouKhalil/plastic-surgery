@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style>
+    p{
+        font-size: 16px;
+    }
+</style>
+</head>
+<body>
+    <script>
+        class Doctors{
+        constructor(name_doctor,number_doctor,specialty,experience,payment_per_hour,workHours){
+            this.setName_doctor = name_doctor;
+            this.setNumber_doctor = number_doctor;
+            this.setSpecialty = specialty;
+            this.setExperience = experience;
+            this.setPayment_per_hour = payment_per_hour
+            this.setWorkHours = workHours
+        }
+        get getName_doctor(){
+            return this.name_doctor
+        }
+        set setName_doctor(name_doctor){
+            this.name_doctor = name_doctor
+        }
+        get getNumber_doctor(){
+            return this.number_doctor
+        }
+        set setNumber_doctor(number_doctor){
+            var checkNumberDoctor = /^\(?([0-9]{3})\)?[-\s]?([a-zA-Z]{3,})/g   //  4
+            if(checkNumberDoctor.test(number_doctor)){
+                this.number_doctor = number_doctor
+            }
+            else{
+                alert("U need to write first the 3 number of the doctor and after - or space and after his name U will get undefined")
+            }
+        }
+        get getSpecialty(){
+            return this.specialty
+        }
+        set setSpecialty(specialty){
+            var checkSpecialty = /^([^0-9!@#$%^&*()_+-=]*)$/   // 5
+            if(checkSpecialty.test(specialty)){
+                this.specialty = specialty
+            }
+            else{
+                alert("Write only letters in the specialty U will get undefined")
+            }
+        }
+        get getExperience(){
+            return this.experience
+        }
+        set setExperience(experience){
+            this.experience = experience
+        }
+        get getPayment_per_hour(){
+            return this.payment_per_hour
+        }
+        set setPayment_per_hour(payment_per_hour){
+            this.payment_per_hour = payment_per_hour
+        }
+        get getWorkHours(){
+            return this.workHours
+        }
+        set setWorkHours(workHours){
+            this.workHours = workHours
+        }
+        Amount_of_money_per_day(){
+            var sumDay = payment_per_hour * work_hours
+            return sumDay
+        }
+        
+        toString(){
+                return "<font size='5'> name doctor : ["+this.getName_doctor+"] and number doctor ["+this.number_doctor+"] and Specialty: ["
+                    +this.specialty+ "] and Experience ["+this.experience+ "] payment per hour ["+this.payment_per_hour+ "] and the work Hours ["+ this.workHours+"]"
+            }
+    }
+    let amountOfMoneyPerDay = (paymentPerHour, workHours) => paymentPerHour * workHours;
+
+        console.log("the salary per day is : $"+amountOfMoneyPerDay(9.20, 8));
+        
+
+        function check(form)  {
+                var d = new Doctors( form.nameD.value , form.id.value , form.specialtyD.value , form.experienceD.value , form.payment_per_hourD.value , form.workHours.value)
+                
+                document.write(d)
+            }
+          
+        </script>
+    
+    </form>
+    <h1 class="text-center bg-dark text-white">Doctors form</h1>
+    <div class="container">
+        <br>
+        <form name="form" onsubmit="return check(form)">
+            <div class="form-group">
+                <label>Name doctor</label>
+                <input id="name" type="text" placeholder="Name" name="nameD" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>number doctor</label>
+                <input id="name" type="text" placeholder="id" name="id" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>specialty</label>
+                <input id="name" type="text" placeholder="experience" name="specialtyD" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>experience</label>
+                <input id="name" type="text" placeholder="payment per hour" name="experienceD" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>payment per hour</label>
+                <input id="name" type="text" placeholder="work hours" name="payment_per_hourD" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label>work hours</label>
+                <input id="name" type="text" placeholder="work hours" name="workHours" class="form-control">
+            </div>
+            <input type="submit" name="" class="btn btn-primary">
+        </form>
+    </div>
+</body>
+</html>

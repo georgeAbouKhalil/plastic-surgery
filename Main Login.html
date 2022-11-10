@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Interactive Login Form</title>
+    <link rel="stylesheet" href="StyleSheet2.css">
+    <script>
+        function check(form){
+            var re = /[A-Za-z0-9]{8,}/
+            var re2 = /^[A-Za-z]{3,}$/
+            var re3 = /[A-Za-z0-9]+[!?@#$%^&-_]/
+            if(!(re.test(form.password.value))){
+                alert("please lengthen this text to 8 characters or more without symbols")
+            }
+            else if (!(re3.test(form.password.value))){
+                alert("Write a special letter")
+            }
+            else if(!(re2.test(form.username.value))){
+                alert("Wrong at least three letters without numbers or special characters")
+            }
+            else{
+                alert("The verification is correct Welcome to the WEB")
+                window,open("HTMLPage1.html")
+                return true
+            }
+        }
+        setInterval(timeUpdate, 1000);
+
+        function timeUpdate() {
+        var d = new Date();
+        document.getElementById("countdown").innerHTML = d.toLocaleTimeString();
+        }
+        
+    </script>
+    <style>
+        p{
+            background-color: white;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            font-size: 35px;
+            height: 70px;
+            width: 200px;
+            position: absolute;
+            left:5%;
+            top: 5%;
+        }
+    </style>
+</head>
+<body>
+    <p id="countdown"></p>
+    <form name="Register_Form" class="box" onsubmit="return check(Register_Form) && false;">
+
+    <h1> login</h1>
+    <input type="text" name="username" placeholder="Enter Username" id="username">
+    <input type="password" name="password" placeholder="Enter password" id="password">
+    <input type="submit" name="submit" id="submit" value="Login">
+
+</form>
+</body>
+</html>

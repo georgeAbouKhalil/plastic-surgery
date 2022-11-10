@@ -1,0 +1,606 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Types of surgeries</title>
+    <script src="https://kit.fontawesome.com/f97ce0bc87.js" crossorigin="anonymous"></script>
+    <script>
+        var i=0;
+        var pics =new Array();
+
+        pics[0]="photo1.jpg";
+        pics[1]="photo2.jpg";
+        pics[2]="photo3.jpg";
+        pics[3]="photo4.jpg";
+        pics[4]="photo5.jpg";
+        pics[5]="photo6.jpg";
+
+        function swapPicture(){
+            document.slide.src=pics[i];
+            if(i<pics.length -1)
+                i++;
+            else i=0;
+            setTimeout("swapPicture()",3500);
+        }
+        window.onload=swapPicture;
+    </script>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            background-image: url("images/background\ \(1\).png");
+            background-size: cover;
+            font-family: sans-serif;
+        }
+        .container .header .slideer{
+            width: 95%;
+            height: 261px;
+            box-sizing: border-box;
+            box-shadow: 5px 5px 10px grey;
+            margin: 20px auto;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .content h1{
+            font-size: 3rem;
+            margin-top: 0;
+            font-style: normal;
+            font-weight: 400;
+            margin-left: 19.6%;
+        }
+        p{
+            height: auto;
+            width: 50%;
+            margin-left: 300px;
+            font-size:large;
+            line-height: 1.6;
+        }
+        .button{
+            border: 1px solid red;
+            font-size: .9rem;
+            cursor: pointer;
+            line-height: 1;
+            text-align: center;
+            padding: .85em 1em;
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
+        .content h2{
+            font-weight: 700;
+        }
+        .bold{
+            font-weight: 700;
+            font-size: 20px;
+        }
+        .container .content li{
+            margin-left: 300px;
+            list-style-position: outside;
+            line-height: 1.6;
+            font-size:17px;
+        }
+        .mini_box{
+            position: relative;
+            left: 15%;
+            height: 1100px;
+            width: 1000px;
+        }
+        .first_pic{
+            width: 474px;
+            height: 354px;
+        }
+        .second_pic{
+            position: relative;
+            top: 32.8%;
+            left: -5px;
+            width: 483px;
+            height: 361px;
+        }
+        .three_pic{
+            position: relative;
+            top: 32.4%;
+            width: 474px;
+            height: 354px;
+        }
+        .first_L{
+            position: absolute;
+            left: 52%;
+            top: 5%;
+        }
+        .insidebox1{
+            position: relative;
+            left: 29%;
+            margin-top: 3%;
+            padding: 3%;
+            color: #000000;
+            border-color: #000000;
+            font-size: 17px;
+        }
+        .insidebox2{
+            position: absolute;
+            left: 0%;
+            top: 35%;
+            padding: 3%;
+            color: #000000;
+            border-color: #000000;
+            font-size: 17px;
+        }
+        .insidebox3{
+            position: absolute;
+            top: 68%;
+            padding: 5%;
+            color: #000000;
+            border-color: #000000;
+            font-size: 17px;
+        }
+        .footer{
+            background: #303036;
+            color: #d3d3d3;
+            height: 220px;
+            width: 100%;
+            position: absolute;
+            left: 0%;
+        }
+        .footer .bottom{
+            background: #343a40;
+            color: #686868;
+            height: 30px;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            padding-top: 20px;
+        }
+        .left{
+            position: relative;
+            left: 1%;
+            bottom: 0%;
+            width: 20%;
+            height: 100%;
+        }
+        .bottom img{
+            width: 70px;
+            position: absolute;
+            bottom: 100%;
+            left: 47.3%;
+        }
+        .left h1{
+            position: absolute;
+            left: 12%;
+            bottom: 67%;
+            color: white;  
+        }
+        .left a{
+            color: white;
+        }
+        .left li{
+            padding-left: 5%;
+        }
+        .left span{
+            color: rgb(119, 0, 255);
+        }
+        .Contents {
+            position: relative;
+            left: 30%;
+            width: 50%;
+            transition: 1.0s;
+        }
+        .right{
+            position: absolute;
+            top: 0%;
+            left: 50%;
+        }
+        .right2{
+            position: absolute;
+            top: 13%;
+            left: 50%;
+        }
+        .right3{
+            position: absolute;
+            top: 26%;
+            left: 50%;
+        }
+        .right4{
+            position: absolute;
+            top: 39%;
+            left: 50%;
+        }
+        .right5{
+            position: absolute;
+            top: 52%;
+            left: 50%;
+        }
+        .right6{
+            position: absolute;
+            top: 65%;
+            left: 50%;
+        }
+        .gotopbtn{
+            position:fixed;
+            width:50px;
+            height:50px;
+            background: #d3d3d3;
+            bottom:40px;
+            right:50px;
+            border-radius: 50%;
+            
+            text-align: center;
+            text-decoration:none;
+            line-height: 50px;
+            font-size: 25px;
+            color: rgb(119, 0, 255);
+        }
+        .gotopbtn:hover{
+            background: #343a40;
+        }
+        .sidebar-box{
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position:absolute;
+            width: 12%;
+            height: auto;
+            top: 47%;
+            left: 2%;
+        }
+        .sidebar-box h2{
+            position: absolute;
+            top: -44px;
+            color: white;
+            background: #03a9f4;
+            padding: 10px 50px;
+            font-size: 20px;
+            font-weight: 700;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .sidebar-box ul{
+            position: relative;
+            background: white;    
+        }
+        .sidebar-box ul li{
+            list-style: none;
+            padding: 10px;
+            width: 112%;
+            background: white;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, .1);
+            position: relative;
+            left: -27%; 
+        }
+        .sidebar-box ul li:hover{
+            transform: scale(1.1);
+            background: #25bcff;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, .2);
+            color: white;
+        }
+        .sidebar-box ul li span{
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            background: #25bcff;
+            flood-color: white;
+            display: inline-block;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-size: 13px;
+            font-weight: 600;
+            
+        }
+        .sidebar-box ul li:hover span{
+            background: white;
+            color: #25bcff;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        a:hover{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="slideer">
+                <div id="img">
+                    <img name="slide">
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Types of Surgery</h1>
+            <p>At Hurley Medical Center, our highly-trained, board certified surgeons are dedicated to delivering the best outcome possible for every patient. Your Hurley surgeon will consult with you to determine the most appropriate surgical options for your individual situation, and to provide you with information on pre-operative preparation and post-operative care and recovery. <br>
+                 <br> Along with our skills, technical expertise, and advanced surgical technology, we consider patient safety, quality, and the patient and family experience as our highest priorities.
+                <br><br>
+                For specific information regarding your health and treatment, please contact your Hurley physician or medical professional.
+                </p>
+                <h1><a name="Bariatric Surgery">Bariatric Surgery</a></h1>
+                <p>
+                    Please visit Hurley Bariatric Center for more information. <br>
+                    <button class="button">Contact Me About Bariatric Surgery</button> <br>
+                    <span class="bold">Breast augmentation surgery</span> <br>
+                    Hurley Medical Center offers breast augmentation surgery for reconstructive purposes after breast cancer surgery (for example), to correct a breast defect, to increase breast size, or to achieve a younger, more natural appearance. Hurley’s plastic surgeons and surgical team will thoroughly answer your questions, address any concerns or apprehension you may have, and help you decide if breast augmentation surgery is right for you. <br>
+                    <span class="bold">Breast reduction surgery</span>
+                    Hurley Medical Center offers breast reduction surgery to decrease breast size and lift the breasts. Hurley’s plastic surgeons and surgical team works with you to determine your goals and desired expectations for breast reduction, and to help you decide if breast reduction surgery is right for you. <br>
+                    <button class="button">Contact Me About Breast Surgery</button>
+                </p>
+                <h1><a name="Colon and Rectal Surgery">Colon and Rectal Surgery</a></h1>
+                <p>Our surgeons offer advanced surgical and minimally invasive (laparoscopic) options. In fact, Hurley’s colorectal surgeons are among the area’s most successful providers of laparoscopic procedures. These minimally invasive options not only treat disease, they also require a smaller incision (which improves cosmetic results), help preserve normal bowel function, reduce post-operative pain and the need for analgesic medication, and speed recovery. Not all patients are candidates for laparoscopic or other minimally invasive forms of surgery. You and your surgeon will be able to determine the most appropriate treatment options for your particular condition.
+                    <br><br>
+                    Our surgeons address the following conditions:
+                    <li>span Anal cancer</li>
+                    <li>Anal condyloma</li>
+                    <li>Anal Fissure</li>
+                    <li>Anal Fistula</li>
+                    <li>Anal incontinence</li>
+                    <li>Anal sphincter repair</li>
+                    <li>Anorectal disease:</li>
+                    <li>Colon cancer</li>
+                    <li>Diverticular disease</li>
+                    <li>Hemorrhoids</li>
+                    <li>Hereditary colon and rectal cancer</li>
+                    <li>Inflammatory bowel disease (IBS)</li>
+                    <li>Polyps</li>
+                    <li>Rectal cancer</li>
+                    <li>Rectal prolapse</li>
+                </p>
+                <p><button class="button">Contact Me About Colon & Rectal Surgery</button></p>
+                <h1><a name="Endocrine Surgery">Endocrine Surgery</a></h1>
+                <p>
+                    The following are among the surgical procedures that our surgeons perform:
+                    <li>Thyroid surgery</li>
+                    <li>Minimally invasive parathryoidectomy</li>
+                    <li>Laparoscopic adrenalectomy</li>
+                </p>
+                <p><button class="button">Contact Me About Endocrine Surgery</button></p>
+                <h1><a name="General Surgery">General Surgery</a></h1>
+                <p>Surgery can be an effective treatment option for a wide range of diseases and disorders. Whether you are facing a complex, innovative surgical procedure or a technique that has been used successfully thousands of times, rest assured that the board-certified surgeons at Hurley Medical Center are among the region’s most experienced physicians using state-of-the-art medical technologies.
+                    <br><br>
+                    When appropriate, we use minimally invasive surgical techniques. This form of surgery can limit hospital stays, post-operative pain and recovery time, and often use smaller incisions that result in less scarring.
+                    <br><button class="button">Contact Me About General Surgery</button>
+                </p>
+                <h1><a name="Gynecological Surgery">Gynecological Surgery</a></h1>
+                <p>Hurley offers highly-trained, board certified surgical gynecologists who specialize in treating conditions of the female genital tract. <br><br>
+                    If you have a gynecological condition that requires a surgical procedure, you can count on our experienced, compassionate team of gynecologists, surgeons, gynecologic oncologists, urogynecologists, interventional radiologists, anesthesiologists, and nurse specialists for the highest, most advanced level of medical care. <br><br>
+                    Hurley’s gynecological surgical services and procedures include:
+                <li>Endometrial Ablation</li>
+                <li>Gynecologic Cancer Surgery</li>
+                <li>Interventional Radiology</li>
+                <li>Tubal Ligation</li>
+                <li>UAE</li>
+                </p>
+                <p><button class="button">Contact Me About Gynecological Surgery</button></p>
+                <div class="mini_box">
+                    <img class="first_pic" src="images/tummy-tuck.jpg">
+                    <span class="first_L"><h2>Tummy Tuck</h2>Sculpt your stomach by removing excess skin and fat, and by <br>tightening the abdomen muscles. <br>
+                    <button class="insidebox1">TUMMY TUCK</button></span>
+                    <img class="second_pic" src="images/liposuction.jpg">
+                    <span class="insidebox2"><h2>Liposuction</h2>Rid your body of stubborn pockets of fat. When done <br> correctly, liposuction is the essence of body contouring. <br>
+                    <button class="insidebox1">LIPOSUCTION</button></span>
+                    <img class="three_pic" src="images/mommy-makeover.jpg">
+                    <span class="insidebox3"><h2>Mommy Makeover</h2>Regain your pre-pregnancy figure with a combination <br>
+                        procedure that address both the body and breasts. <br>
+                    <button class="insidebox1">MOMMY MAKEOVER</button></span>
+                </div>
+                <h1><a name="Hand Surgery">Hand Surgery</a></h1>
+                <p>For certain hand injuries and conditions, a better result can be achieved with arthroscopic surgery, offered by the highly skilled surgeons at Hurley  <br>
+                    Arthroscopic surgery is a minimally invasive procedure that allows surgeons to diagnose and treat hand injuries or disorders, such as carpal tunnel syndrome, without making large incisions. For the patient, this means less pain and faster recovery times.
+                </p>
+                <p><button class="button">Contact Me About Hand Surgery</button></p>
+                <h1><a name="Head and Neck Surgery">Head and Neck Surgery</a></h1>
+                <p>Early identification and treatment of oral, head and neck disorders means a higher rate of positive outcomes. We encourage you to see an ear, nose and throat (ENT or otolaryngology) specialist if you are experience problematic symptoms such as unusual lumps or sudden, unexplained pain. In many cases, and with early detection of problems, we can use minimally invasive techniques that result in reduced pain and faster recoveries. <br>
+                    We regularly treat the following conditions: <br>
+                    <li>Nasal and sinus disorders, upper airway obstruction</li>
+                    <li>Throat, voice and swallowing problems, including gastroesophageal reflux therapy and tonsillectomies</li>
+                    <li>Diseases of the nerves in the ears, oral cavity, esophagus, head and face</li>
+                    <li>Benign and malignant tumors of the head and neck</li>
+                    <li>Facial deformities, including congenital (at birth) problems and issues resulting from accidents or disease</li>
+                    <li>Structural problems related to hearing loss or impairment</li>
+                    <p><button class="button">Contact Me About Head & Neck Surgery</button></p>
+                </p>
+                <h1><a name="Hernia Surgery">Hernia Surgery</a></h1>
+                <p>Please visit Hurley’s Hernia Center for more information.</p>
+                <p><button class="button">Contact Me About Hernia Surgery</button></p>
+                <h1><a name="Neurosurgery">Neurosurgery</a></h1>
+                <p>Specializing in surgery on the brain and other parts of the nervous system, Hurley Medical Center’s highly-experienced board certified neurosurgeons perform a wide variety of surgeries, from minor outpatient procedures to extremely complicated surgeries that require extensive inpatient management and treatments.
+                    <br>
+                    Procedures we perform include:
+                    <br>
+                    <li>Brain tumors</li>
+                    <li>Complicated cerebral aneurisms requiring skull-based approaches</li>
+                    <li>Microdiscectomies</li>
+                    <li>Minimally invasive spine surgeries</li>
+                    <li>Thermal procedures</li>
+                    <p><button class="button">Contact Me About Neurosurgery</button></p>
+                </p>
+                <h1><a name="Orthopedic Surgery">Orthopedic Surgery</a></h1>
+                <p>Hurley Medical Center offers many orthopedic surgery options, including:</p>
+                <li>Achilles Tear Surgery</li>
+                <li>Arthroscopic Surgery</li>
+                <li>Meniscus Repair Surgery</li>
+                <li>Open-Knee Surgery</li>
+                <li>Shoulder Surgery</li>
+                <li>Spinal Surgery</li>
+                <p><button class="button">Contact Me About Orthopedic Surgery</button></p>
+                <h1><a name="Ophthalmological Surgery">Ophthalmological Surgery</a></h1>
+                <p>Our ophthalmologists are experienced surgeons who use the most modern technologies, including laser surgery, to perform operations that correct problems and promote faster recovery, while minimizing the amount of pain experienced by the patient. The majority of our procedures can be done on an outpatient basis and do not require an overnight stay at the hospital. <br><br>
+                    Our board-certified ophthalmologists regularly perform state-of-the-art cataract surgery and retinal procedures, as well as glaucoma, strabismus, corneal and oculo-plastic surgeries.
+                </p>
+                <p><button class="button">Contact Me About Ophthalmological Surgery</button></p>
+                <h1><a name="Outpatient Surgery">Outpatient Surgery</a></h1>
+                <p>Outpatient surgery, also called same day surgery or ambulatory surgery, is performed at Hurley Medical Center for a wide range of routine or minor conditions that do not require an overnight stay in the hospital. Some patients may be admitted to the hospital after certain types of outpatient surgery such as bariatric surgery, joint replacement, or other elective surgery. <br><br>
+                    Some common outpatient surgeries include: <br>
+                <li>Arthroscopy</li>
+                <li>Breast Biopsy</li>
+                <li>Burn Excision/Debridement</li>
+                <li>Cataract Surgery</li>
+                <li>Caesarean Section</li>
+                <li>Circumcision</li>
+                <li>Dental Restoration</li>
+                <li>Gastric Bypass</li>
+                <li>Head and Neck Surgery</li>
+                <li>Hysterectomy (Abdominal or Vaginal)</li>
+                <li>Knee/Hip Replacement</li>
+                <li>Laparoscopy</li>
+                <li>Liver Resection</li>
+                <li>Lung Resection</li>
+                <li>Major Abdominal Procedure</li>
+                <li>Major Vascular Surgery</li>
+                <li>Mastectomy (Radical)</li>
+                <li>Mediport Insertion or Removal</li>
+                <li>Prostate Surgery</li>
+                <li>Removal of Hardware (Plates and Screws)</li>
+                <li>Sinus Endoscopy</li>
+                <li>Tonsillectomy</li>
+                <li>Tubal Ligation</li>
+                <li>Vasectomy</li>
+                <li>Ventral Hernia</li>
+                <p><button class="button">Contact Me About Outpatient Surgery</button></p>
+            </p>
+            <h1><a name="Pediatric Surgery">Pediatric Surgery</a></h1>
+            <p>The Pediatric Surgery Department at Hurley Medical Center provides the highest quality care for young patients requiring surgery. Affiliated with Children’s Hospital of Michigan in Detroit, Hurley can accommodate all pediatric surgical needs. Most pediatric procedures are performed here at Hurley but occasionally the expertise of Children’s Hospital of Michigan is needed. <br><br>
+            
+                Hurley pediatric surgeons perform inpatient and outpatient surgeries, as well as pre-surgical testing and patient consultations to determine the need for an operation. Consultations and preparation for surgeries are also conducted at Hurley Pediatric Surgery Clinic on Linden Road.
+            </p>
+            <p><button class="button">Contact Me About Pediatric Surgery</button></p>
+            <h1><a name="Plastic and Reconstructive Surgery">Plastic and Reconstructive Surgery</a></h1>
+            <p>At Hurley Medical Center, our highly-trained plastic and reconstructive surgeons are board certified in Plastic Surgery as well as General Surgery, and can treat a wide variety of complicated cases. They are recognized leaders in this specialty and are dedicated to delivering the best outcome possible for every patient. <br><br>
+                Plastic and reconstructive surgery procedures performed: <br>
+            <li>Post-weight loss surgery abdominoplasty</li>
+            <li>Soft tissue injuries and fractures of the face</li>
+            <li>Reconstruction of burned skin</li>
+            <li>Repair of complex wounds</li>
+            <li>Removal of skin cancer lesions</li>
+            <li>Soft tissue injuries of the hand and forearm</li>
+            <li>Open and closed fractures of the hand and wrist</li>
+            <li>Carpal tunnel surgery</li>
+            <li>Breast reduction</li>
+            <li>Breast Cancer Reconstruction</li>
+            <p><button class="button">Contact Me About Plastic & Reconstructive Surgery</button></p>
+        </p>
+        <h1><a name="Robotic Surgery">Robotic Surgery</a></h1>
+        <p>At Hurley Medical Center, surgeons and physicians have adopted the da Vinci robotic Surgical System for a wide range of surgical procedures. Da Vinci’s advanced level of technology takes surgery beyond the limits of the human hand. This da Vinci Surgical System compliments our goal of extending minimally invasive surgery to the broadest base of patients including but not limited to: cholecystectomy (gallbladder removal), hysterectomies, myomectomies, hiatal and hernia repairs, removal of one or both adrenal glands, GERD related diagnoses (Reflux), and esophageal stricture. <br>
+            <span class="bold">The da Vinci Surgical System offers</span>
+            <li>Enhanced 3D, high-definition vision of operative field, with up to 10x magnification</li>
+            <li>New optimal dual console, which allows a second surgeon to provide assistance</li>
+            <li>Ability to mimic the surgeon’s hand movements with enhanced dexterity</li>
+        </p>
+        <p>
+            <span class="bold">Potential patient benefits</span>
+            <li>Less pain</li>
+            <li>Lower risk of infection</li>
+            <li>Lower risk of scarring</li>
+            <li>Shorter recovery time</li>
+            <li>Decreased blood loss</li>
+        </p>
+        <p><span class="bold">Eligible Procedures</span>
+        <li>Urological Surgery</li>
+        <li>Gynecological Surgery</li>
+        <li>Thoracic Surgery</li>
+        <li>Breast Surgery</li>
+        <li>Colorectal Surgery</li>
+        <li>Gallbladder removal (cholecystectomy)</li>
+        <li>Hysterectomies</li>
+        <li>Myomectomies</li>
+        <li>Hiatal and hernia repairs</li>
+        <li>GERD related diagnoses (reflux)</li>
+        <li>Adrenal gland removal</li>
+        <li>Esophageal stricture</li>
+        <p><button class="button">Contact Me About Robotic Surgery</button></p>
+        </p>
+        <h1><a name="Thoracic Surgery">Thoracic Surgery</a></h1>
+        <p>The thoracic surgeons of Hurley Medical Center are highly trained, board certified and very experienced in this complex area of surgery. In addition to traditional open surgical techniques, our surgeons often pursue minimally invasive surgical options when appropriate. <br><br>
+            These new techniques often involve less blood loss and scarring, faster healing of tissue, faster overall recovery times, less pain, and positive patient outcomes. <br><br>
+            We regularly conduct the following thoracic surgery procedures, among others:
+            <li>Lung Airway Surgery</li>
+            <li>Pleural Tumors Surgery</li>
+            <li>Pulmonary Lobectomy and Other Lung Cancer Surgery</li>
+            <p><button class="button">Contact Me About Thoracic Surgery</button></p>
+        </p>
+        <h1><a name="Trauma Surgery">Trauma Surgery</a></h1>
+        <p>Level I verification is the highest credential possible from the American College of Surgeons (ACS) for any trauma center. The Hurley Trauma Center is affiliated with the University of Michigan Health Center and provides immediate response by a highly specialized, in-house team of trauma professionals 24 hours per day, every day of the year. <br><br>
+            Trauma is a time-sensitive condition, and the Hurley Trauma Center has the speed, efficiency and experience to deal with the most intense demands of a critically injured patient.
+        </p>
+        <p><button class="button">Contact Me About Trauma Surgery</button></p>
+        <h1><a name="Urologic Surgery"></a>Urologic Surgery</h1>
+        <p>Hurley Medical Center provides full-spectrum surgical treatment for men with prostate, testicular or other urologic conditions. In many cases, including the most complicated medical conditions, treatment can be provided using minimally invasive surgical techniques that reduce recovery times, promote faster healing and lead to positive patient outcomes. <br><br>
+            Our highly experienced urological surgeons treat a broad range of men’s health issues: <br>
+        <li>Prostate cancer, testicular cancer, kidney cancer and bladder cancer screening and surgery</li>
+        <li>Minimally invasive surgical treatment for benign prostate enlargement, including state-of-the-art laser methodologies</li>
+        <li>Treatment of kidney stones and kidney cancer</li>
+        <li>Bladder procedures for bleeding, incontinence, infection and cancers</li>
+        <li>Lithotripsy for bladder stones</li>
+        <p><button class="button">Contact Me About Urologic Surgery</button></p>
+        </p>
+        <h1><a name="Vascular Surgery"></a>Vascular Surgery</h1>
+        <p>The experienced, board-certified vascular surgeons of Hurley Medical Center provide a full range of surgical treatment options for our patients with vascular disease and disorders. <br><br>
+            Whether your surgery is part of emergency treatment or an elective procedure, rest assured that our state-of-the-art technology, advanced imaging techniques, and the skills of our highly trained surgeons will all be deployed to help correct your medical problems and allow you to return to your regular activities. <br><br>
+        
+            We regularly perform the following procedures, among others: <br>
+        <li>Angioplasty and stents</li>
+        <li>Aneurysm repair</li>
+        <li>Carotid endarterectomy</li>
+        <li>Lower extremity/limb salvage</li>
+        <li>Thrombolytic therapy</li>
+        <p><button class="button">Contact Me About Vascular Surgery</button></p>
+        </p>
+        <h1><a name="Minimally Invasive Surgery"></a>Minimally Invasive Surgery</h1>
+        <p>Minimally invasive surgery (MIS) has become the standard of care for many procedures and has become widely accepted in nearly all specialties, often replacing traditional open surgery. <br><br>
+            The surgeons at Hurley Medical Center are dedicated to bringing the latest in surgical advances to our patients. With our certification as a Level I Trauma Center, the highest designation possible, you can rest assured that we staff the best surgeons available, all of whom are adept at handling even most complex conditions and severely injured patients.
+            <p><button class="button">Contact Me About Minimally Invasive Surgery</button></p>
+        </p>
+        </div>
+        <div class="sidebar-box">
+            <h2>List Item</h2>
+            <ul>
+                <li><span>1</span><a href="#Bariatric Surgery">Bariatric Surgery</a></li>
+                <li><span>2</span><a href="#Colon and Rectal Surgery">Colon and Rectal Surgery</a></li>
+                <li><span>3</span><a href="#Endocrine Surgery">Endocrine Surgery</a></li>
+                <li><span>4</span><a href="#General Surgery">General Surgery</a></li>
+                <li><span>5</span><a href="#Gynecological Surgery">Gynecological Surgery</a></li>
+                <li><span>6</span><a href="#Hand Surgery">Hand Surgery</a></li>
+                <li><span>7</span><a href="#Head and Neck Surgery">Head and Neck Surgery</a></li>
+                <li><span>8</span><a href="#Hernia Surgery">Hernia Surgery</a></li>
+                <li><span>9</span><a href="#Neurosurgery">Neurosurgery</a></li>
+                <li><span>10</span><a href="#Orthopedic Surgery">Orthopedic Surgery</a></li>
+                <li><span>11</span><a href="#Ophthalmological Surgery">Ophthalmological Surgery</a></li>
+                <li><span>12</span><a href="#Outpatient Surgery">Outpatient Surgery</a></li>
+                <li><span>13</span><a href="#Pediatric Surgery">Pediatric Surgery</a></li>
+                <li><span>14</span><a href="#Plastic and Reconstructive Surgery">Plastic and Reconstructive Surgery</a></li>
+                <li><span>15</span><a href="#Robotic Surgery">Robotic Surgery</a></li>
+                <li><span>16</span><a href="#Thoracic Surgery">Thoracic Surgery</a></li>
+                <li><span>17</span><a href="#Trauma Surgery">Trauma Surgery</a></li>
+                <li><span>18</span><a href="#Urologic Surgery">Urologic Surgery</a></li>
+                <li><span>19</span><a href="#Vascular Surgery">Vascular Surgery</a></li>
+                <li><span>20</span><a href="#Minimally Invasive Surgery">Minimally Invasive Surgery</a></li>
+                <li><span>21</span><a href="HTMLPage1.html">Back to Home Page</a></li>
+            </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="bottom">
+                @official Plastic surgery || by ak
+                <img src="images/logo.png">
+            </div>
+            <div class="left">
+                <h1> <span>Q</span>uick  <span>L</span>inks</h1> <br><br><br>
+                <li><a href="HTMLPage1.html"> Home Page</li></a> <br>
+                <li><a href="about3.html"> About</li></a> <br>
+                <li><a href="Information.html">Information</li></a> <br>
+                <li><a href="contact us.html">Contact us</li></a>
+            </div>
+        </div>
+    </div>
+    
+    <a href="#top" class="gotopbtn"><i class="fas fa-arrow-up"></i></a>
+
+    </div>
+</body>
+</html>

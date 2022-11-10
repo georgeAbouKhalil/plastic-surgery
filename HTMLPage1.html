@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="StyleSheet1.css" type="text/css"/>
+    <title></title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.png">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="about3.html">About</a></li>
+                    <li><a href="Information.html">Information</a></li>
+                    <li><a href="Before & after photos.html">Before & after photos</a></li>
+                    <li><a href="Types of surgeries.html">Types of surgeries</a></li>
+                    <li><a href="contact us.html">Contact us</a></li>
+                </ul>
+            </nav>
+            <div class="user">
+                <p>David Beckham</p>
+                <img src="images/david beckham.jpg">
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <img src="images/search.png" class="search-icon">
+            <div class="socail-links">
+                <img src="images/fb.png">
+                <img src="images/pt.png">
+                <img src="images/tw.png">
+
+            </div>
+            <img src="images/info.png" class="info-icon">
+        </div>
+
+        <div class="msg-container">
+            <div id="slider">
+                <div class="msg-col">
+                    <h1>The reasoning </h1>
+                    <p>Plastic surgery is used to repair and reconstruct missing or damaged tissue and <br>
+                    The main aim of plastic surgery is to restore the function of tissues and skin to as close  <br>
+                     to normal as possible. Improving the appearance of body parts is an important, but secondary, aim.</p>
+                    <a href="The reasoning.html">Learn More</a>
+                </div>
+                <div class="msg-col">
+                    <h1>Side Effects</h1>
+                    <p>When most people think of plastic surgery, they only think of the perfectly smoothed, <br>
+                        flawless result. The risks involved are almost always overlooked, or brushed off with the <br>
+                        adage “pain is beauty” or the like. Even with all of the outstanding progress that has been <br>
+                        made regarding the technology surrounding plastic surgery.
+                    
+                    </p>
+                    <a href="side effects.html">Learn More</a>
+                </div>
+                <div class="msg-col">
+                    <h1>The history</h1>
+                    <p>The history of plastic surgery – from BC, through the 1400s and world wars, to <br>
+                        the present day. Although the development of plastic surgery is popularly <br>
+                        believed to have taken place over the past 20 years or so, the origins of plastic <br>
+                        surgery are very old.</p>
+                    <a href="The history.html">Learn More</a>
+                </div>
+                <div class="msg-col">
+                    <h1>Why I chose Plastic</h1>
+                    
+                    <a href="Why I chose this topic.html">to see more</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="controller">
+            <div id="line1"></div>
+            <div id="line2"></div>
+            <div id="line3"></div>
+            <div id="line4"></div>
+            <div id="active"></div>
+        </div>
+        
+        <script>
+
+            var slider = document.getElementById('slider');
+            var active = document.getElementById('active');
+            var line1 = document.getElementById('line1');
+            var line2 = document.getElementById('line2');
+            var line3 = document.getElementById('line3');
+            var line4 = document.getElementById('line4');
+
+            line1.onclick = function(){
+                slider.style.transform = 'translateX(0)';
+                active.style.top = '0px'
+            }
+            line2.onclick = function(){
+                slider.style.transform = 'translateX(-25%)';
+                active.style.top = '80px'
+            }
+            line3.onclick = function(){
+                slider.style.transform = 'translateX(-50%)';
+                active.style.top = '160px'
+            }
+            line4.onclick = function(){
+                slider.style.transform = 'translateX(-75%)';
+                active.style.top = '240px'
+            }
+
+        </script>
+
+    </div>
+
+</body>
+</html>

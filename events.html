@@ -1,0 +1,252 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        img{
+            width: 60px;
+            height: 60px;
+            position: relative;
+            left: 70%;
+        }
+        .right{
+            position: relative;
+            left: 70%;
+        }
+    </style>
+</head>
+<body onload="loding()">
+    <h1 id="headline" onmousedown="mouseDown()" onmouseup="mouseUp()" onmouseout="mouseOut()">Our Client</h1>
+    <p id="c1"></p>
+    <h1 id="headline2">Our Doctors</h1>
+    <p id="d1"></p>
+    <h1 id="headline3">Our Product</h1>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    
+    <button id="btn">change the h1 size and double click to change the back ground</button> <br><br>
+    <img id="img1" onmouseover="changeBig(this)" onmouseout="changeNormall(this)" src="https://i.pinimg.com/736x/9f/32/20/9f3220f4535dd9cd9743b995fdfdeaa1.jpg" >
+    <p class="right">To resize the image, move the mouse over</p>
+
+<script>
+    str = `George`
+    my_G = `Miki`
+    str2 = `my name is ${str} and my best friend is ${my_G}`
+    document.write(str2)
+    
+        var size = document.getElementById("btn");
+        size.addEventListener("click",changeSize)
+        size.addEventListener("dblclick",changeColor)
+    
+    function changeSize(){
+        document.getElementById("headline").style.fontSize = "45px"
+    }
+    function changeColor(){
+        document.getElementById("headline").style.background = "pink"
+    }
+function mouseDown() 
+    {
+        document.getElementById("headline").style.color = "blue";
+        document.getElementById("headline2").style.color = "blue";
+        document.getElementById("headline3").style.color = "blue";
+    }
+
+    function mouseUp()
+    {
+        document.getElementById("headline").style.color = "red";
+        document.getElementById("headline2").style.color = "red";
+        document.getElementById("headline3").style.color = "red";
+    }
+
+    function mouseOut()
+    {
+        document.getElementById("headline").style.color = "black";
+        document.getElementById("headline2").style.color = "black";
+        document.getElementById("headline3").style.color = "black";
+    }
+    function loding(){
+        alert('The Web Site still in loading')
+    }
+    function changeBig(x){
+        document.getElementById("img1").style.height = "150px"
+        x.style.width = "150px";
+    }
+    function changeNormall(x){
+        x.style.height = "60px";
+        x.style.width = "60px";
+    }
+
+    class Client {
+                constructor(fullName, id, gender, age) {
+                    this.setFullName = fullName
+                    this.setId = id
+                    this.setGender = gender
+                    this.setAge = age
+                }
+                set setFullName(n) {
+                    this.fullName = n;  
+               }
+                set setId(t){
+                    this.id = t;
+                }
+                
+                set setGender(d){
+                    this.gender = d;
+                }
+
+                set setAge(a){
+                    this.age = a;
+                }
+                get getFullName() {
+                    return this.fullName;
+                }
+                get getId() {
+                    return this.id;
+                }
+                get getGender() {
+                    return this.gender;
+                }
+                get getage(){
+                    return this.age;
+                }
+                 toString() {
+                 return "<font size='5'>The client full name is  [" + this.fullName + "] the id of the client [" + this.id + "]  the gender is [" 
+                    + this.gender + "] "+" and the is age "+this.age;
+                }
+            }
+
+    class Doctors{
+        constructor(name_doctor,number_doctor,specialty,experience,payment_per_hour,work_hours){
+            this.name_doctor = name_doctor;
+            this.number_doctor = number_doctor;
+            this.specialty = specialty;
+            this.experience = experience;
+            this.payment_per_hour = payment_per_hour
+            this.work_hours = work_hours
+        }
+        get getName_doctor(){
+            return this.name_doctor
+        }
+        set setName_doctor(name_doctor){
+            this.name_doctor = name_doctor
+        }
+        get getNumber_doctor(){
+            return this.number_doctor
+        }
+        set setNumber_doctor(number_doctor){
+            if(number_doctor > 0)
+                this.number_doctor = number_doctor
+        }
+        get getSpecialty(){
+            return this.specialty
+        }
+        set setSpecialty(specialty){
+            this.specialty = specialty
+        }
+        get getExperience(){
+            return this.experience
+        }
+        set setExperience(experience){
+            this.experience = experience
+        }
+        get getPayment_per_hour(){
+            return this.payment_per_hour
+        }
+        set setPayment_per_hour(payment_per_hour){
+            this.payment_per_hour = payment_per_hour
+        }
+        get getWork_hours(){
+            return this.work_hours
+        }
+        set setWork_hours(work_hours){
+            this.work_hours = work_hours
+        }
+        Amount_of_money_per_day(){
+            var sumDay = payment_per_hour * work_hours
+            return sumDay
+        }
+        
+        toString(){
+                return "<font size='5'> name doctor : ["+this.name_doctor+"] and number doctor ["+this.number_doctor+"] and Specialty: ["+this.specialty+ "] and Experience ["+this.experience+ "] payment per hour ["+this.payment_per_hour+ "] work hours ["+this.work_hours+"]";
+            }
+    }
+    let amountOfMoneyPerDay = (paymentPerHour, workHours) => paymentPerHour * workHours;
+
+        console.log("the salary per day is : $"+amountOfMoneyPerDay(9.20, 8));
+        
+    class Product{
+        constructor(name_product,price_product,company_money,quantity){
+            this.name_product = name_product;
+            this.price_product = price_product;
+            this.company_money = company_money;
+            this.quantity = quantity;
+        }
+        get getName_product(){
+            return this.name_product
+        }
+        set setName_product(name_product){
+            this.name_product = name_product.match(/^[A-Za-z]{3,}$/)[0]
+        }
+        get getPrice_product(){
+            return this.price_product
+        }
+        set setPrice_product(price_product){
+            if(price_product >= 1)
+                this.price_product = price_product
+        }
+        get getCompany_money(){
+            return this.company_money
+        }
+        set setCompany_money(company_money){
+            this.company_money = company_money
+        }
+        get getQuantity(){
+            return this.quantity
+        }
+        set setQuantity(quantity){
+            if(quantity > 0)
+                this.quantity = quantity
+        }
+        TotalMoney(){
+            var sum = this.company_money -= this.price_product
+            return sum
+        }
+        toString(){
+                return "<font size='5'> name product is : ["+this.name_product+"] and price product is: ["+this.price_product+"$] and Company money is: ["+this.company_money + "$] and the Quantity is: ["+this.quantity+"]";
+            }
+    }
+    d1 =new Doctors ()
+    d1.setName_doctor = "George"
+    d1.setNumber_doctor = 75
+    d1.setSpecialty = "back"
+    d1.setExperience = 15
+    d1.setPayment_per_hour = 35
+    d1.setWork_hours = 250
+    document.getElementById("d1").innerHTML = d1
+
+    c1 = new Client()
+    c1.setFullName = "jose rodriguez"
+    c1.setId = 123456789
+    c1.setGender = "male"
+    c1.setAge = 26
+    document.getElementById("c1").innerHTML = c1
+
+    p1 = new Product()
+    p1.setName_product = "Scalpels"
+    p1.setPrice_product = 250
+    p1.setCompany_money = 1000000
+    p1.setQuantity = 100
+    document.getElementById("p1").innerHTML = p1
+    document.getElementById("p2").innerHTML ="<font size='5'> After the purchase the money left for the company " + p1.TotalMoney()
+</script>
+</body>
+</html>

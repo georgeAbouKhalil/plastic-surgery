@@ -1,0 +1,502 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>side effects</title>
+    <script src="https://kit.fontawesome.com/f97ce0bc87.js" crossorigin="anonymous"></script>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            background-image: url("images/background\ \(1\).png");
+            background-size: cover;
+            font-family: sans-serif;
+        }
+        .logo{
+            background: rgba(29, 33, 61, 0.5);
+            width: 100%;
+            height: 60px;
+            padding-left: auto;
+            margin-top: 30px;
+        }
+        .logo img{
+            width: 45px;
+            position: relative;
+            z-index: 10;
+            cursor: pointer;
+            padding-left: 3.2%;
+            top: 11px;
+        }
+        .bold{
+            font-size: 20px;
+            font-weight: bold;
+            padding-top: 2%;
+        }
+        .item1{
+            list-style-type: none;
+            list-style-position:inside;
+        }
+        .sidebar{
+            width: 155px;
+            height: 835vh;
+            background: rgba(29, 31, 58, 0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .search-icon{
+            width: 20px;
+            display: block;
+            margin: 120px auto 0;
+        }
+        .socail-links{
+            width: 20px;
+            display: block;
+            margin: 220px auto 0;
+            text-align: center;
+        }
+        .socail-links img{
+            height: 15px;
+            margin-bottom: 30px;
+        }
+        .info-icon{
+            width: 20px;
+            position: absolute;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+        }
+        .navbar h1{
+            text-align: center;
+        }
+        .navbar h2{
+            text-align: center;
+        }
+        .navbar img{
+            position: relative;
+            left: 30%;
+            width: 600px;
+            border-radius: 2%;
+        }
+        .navbar p> img{
+            position: relative;
+            left: 12%;
+            width: 570px;
+            border-radius: 2%;
+        }
+        .navbar p{
+            font-size: 19px;
+            padding-left: 20%;
+        }
+        .square{
+            list-style-type: square;
+            padding-left: 21%;
+            font-size: 20px;
+        }
+        .firstp{
+            width: 260px;
+            height: 180px;
+            position: absolute;
+            top: 235%;
+            left: 78%;
+            border-radius: 4%;
+        }
+        .possibleAllergic{
+            width: 280px;
+            height: 180px;
+            position: absolute;
+            top: 280%;
+            left: 79%;
+            border-radius: 4%;
+        }
+        .bodyDysmorphic{
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            top: 456%;
+            left: 70%;
+            border-radius: 4%;
+        }
+        .footer{
+            background: #303036;
+            color: #d3d3d3;
+            height: 220px;
+            width: 100%;
+            position: absolute;
+            left: 0%;
+        }
+        .footer .bottom{
+            background: #343a40;
+            color: #686868;
+            height: 30px;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            padding-top: 20px;
+        }
+        .left{
+            position: relative;
+            left: 1%;
+            bottom: 0%;
+            width: 20%;
+            height: 100%;
+        }
+        .bottom img{
+            width: 80px;
+            position: absolute;
+            bottom: 100%;
+            left: 47.3%;
+        }
+        .left h1{
+            position: absolute;
+            left: 12%;
+            bottom: 67%;
+            color: white; 
+        }
+        .left a{
+            color: white;
+        }
+        .left li{
+            padding-left: 5%;
+        }
+        .left span{
+            color: rgb(119, 0, 255);
+        }
+        .Contents {
+            position: relative;
+            left: 30%;
+            width: 50%;
+            transition: 1.0s;
+        }
+        .right{
+            position: absolute;
+            top: 0%;
+            left: 50%;
+        }
+        .right2{
+            position: absolute;
+            top: 13%;
+            left: 50%;
+        }
+        .right3{
+            position: absolute;
+            top: 26%;
+            left: 50%;
+        }
+        .right4{
+            position: absolute;
+            top: 39%;
+            left: 50%;
+        }
+        .right5{
+            position: absolute;
+            top: 52%;
+            left: 50%;
+        }
+        .right6{
+            position: absolute;
+            top: 65%;
+            left: 50%;
+        }
+        .gotopbtn{
+            position:fixed;
+            width:50px;
+            height:50px;
+            background: #d3d3d3;
+            bottom:40px;
+            right:50px;
+            border-radius: 50%;
+            
+            text-align: center;
+            text-decoration:none;
+            line-height: 50px;
+            font-size: 25px;
+            color: rgb(119, 0, 255);
+        }
+        .gotopbtn:hover{
+            background: #343a40;
+        }
+    </style>
+</head>
+<body>
+    <a name="top"></a>
+    <div class="container">
+        <div class="header">
+            <div class="logo" title="Back to home page">
+                <a href="HTMLPage1.html">
+                <img src="images/logo.png"></a>
+        </div>
+        
+        <div class="navbar">
+            <h1>Side Effects</h1>
+            <img src="images/582541_620.jpg" >
+            <div class="Contents">
+                <li><a href="#Surgical Risks">Surgical Risks</a></li>
+                <li  class="right"><a href="#The Risks & Rewards of Plastic Surgery"> The Risks & Rewards of Plastic Surgery</li></a>
+                <li><a href="#Huge Financial Costs">Huge Financial Costs</a></li>
+                <li class="right2"><a href="#Body Dysmorphic Disorder"> Body Dysmorphic Disorder</li></a>
+                <li><a href="#Emotional Damage">Emotional Damage</a></li>
+                <li class="right3"><a href="#Health Risks"> Health Risks</li></a>
+                <li><a href="#The Risk of the Procedure Going Wrong">The Risk of the Procedure Going Wrong</a></li>
+                <li class="right4"><a href="#The Rewards of Plastic Surgery">The Rewards of Plastic Surgery</li></a>
+                <li><a href="#Physical Pains">Physical Pains</a></li>
+                <li class="right5"><a href="#Health and Quality of Life">Health and Quality of Life</li></a>
+                <li><a href="#Blood Loss">Blood Loss</li></a>
+                <li class="right6"><a href="#Weighing the Risks Versus the Rewards">Weighing the Risks Versus the Rewards</li></a>
+                <li><a href="#Possible Allergic Reactions">Possible Allergic Reactions</li></a>
+            </div>
+            <h1>7 Negative Side Effects of Plastic Surgery</h1>
+            <p>
+                When most people think of plastic surgery, they only think of the perfectly smoothed, <br>
+                flawless result. The risks involved are almost always overlooked, or brushed off with the <br>
+                adage “pain is beauty” or the like. Even with all of the outstanding progress that has been <br>
+                made regarding the technology surrounding plastic surgery, there are many facets of <br>
+                danger—including simple human error. Millions of cosmetic procedures are performed <br>
+                each year, and many without incident. Though this is normally the case, it is not possible <br>
+                to overlook the risks that are involved with taking part in such invasive procedures.
+                <br></p>
+                <h2> <a name="Surgical Risks"></a> 1. Surgical Risks</h2>
+                <p>Implant rejection, blood clots, scarring, skin necrosis, nerve damage, and pigmentation are <br>
+                    all risks associated with this type of surgery. Smokers may also face the risk of an extended <br>
+                    amount of healing time, while those with any vascular conditions will need a longer <br>
+                    healing plan as well. Shock, respiratory failure, and cardiac arrest are all things that can <br>
+                    happen right on the operating table. There are also a few cases in which a surgeon has <br>
+                    accidentally left a tool inside of the patient’s body—and sewed it up. This will lead to <br>
+                    infection and will require additional surgery in order to remove it.
+                    <br></p>
+                    <h2> 2. Huge Financial Costs</h2>
+                    <p>Plastic surgery is not a cheap thrill by any means. Many procedures cost tens of thousands <br>
+                        of dollars, and the cost only goes up with the experience of the doctor and the intricacy of <br>
+                        the procedure. The patient will need to take time from work in order to make a full <br>
+                        recovery. Small procedures may take a few days to heal while other more detailed <br>
+                        procedures may take weeks for the body to fully recover—this is (normally) all time that is <br>
+                        taken off from a full time job, a huge financial loss.
+                        <br></p>
+                            <h2><a name="Emotional Damage"></a> 3. Emotional Damage</h2>
+                            <p>Those who undergo plastic surgery run the risk of missing the feeling of fulfillment after <br>
+                            they have undergone their procedure. Those who did not feel satisfied often went back to <br>
+                            have additional work done. When the procedure yielding results other than those expected,<br>
+                            the patient may also feel resentment or anger toward their doctor. <br>
+                        </p>
+                        <h2><a name="The Risk of the Procedure Going Wrong"></a> 4. The Risk of the Procedure Going Wrong</h2>
+                        <p>
+                            As with everything, there is always a risk that it just doesn’t turn out exactly as planned, no <br>
+                            matter how much time and thought went into it. Many times individuals will end up with <br>
+                            some very heavy psychological repercussions when a procedure did not end up looking the <br>
+                             way that they visualized. The physical features can end up severely distorted, causing the <br>
+                             patient to seek treatment and medications to deal with it. There are many cases of plastic <br>
+                             surgery gone wrong, so a simple internet search will yield all of the proof needed.
+                        </p>
+                        <h2><a name="Physical Pains"></a> 5. Physical Pains</h2>
+                        
+                        <p>
+                            The most popular complaints of physical pain from those that have undergone plastic <br>
+                            surgery include nausea, vomiting, headaches, and prolonged pain. Over time these pains <br>
+                            can go away, but in a rare case one or more pains can linger. There will also be pronounced <br>
+                            inflammation around the area in which the procedure was performed. This is the reason <br>
+                            that the timeline associated with healing from a traumatic event to the body can vary <br>
+                            widely from person to person.
+                        </p>
+                        <h2><a name="Blood Loss"></a> 6. Blood Loss</h2>
+                        <p>
+                        This is one of the most common concerns related to plastic surgery. Extreme blood loss is <br>
+                        indicative of something going extremely wrong atop the operating table. Large amounts of <br>
+                        blood loss can lead to organ failure or even death. Though this is not the outcome in most <br>
+                        cases, it still remains a negative point as a possibility when making the decision to go under the knife.
+                        </p>
+                        <h2><a name="Possible Allergic Reactions"></a> 7. Possible Allergic Reactions</h2>
+                        <p>It is vital that the patient who is undergoing surgery know all of their allergies. This could <br>
+                            be allergies to materials like certain metals or latex or even medications. When post <br>
+                            operational medications cause an allergic reaction, the patient could be confined to their bed for weeks.
+                        </p>
+                        <h1><a name="The Risks & Rewards of Plastic Surgery"></a> The Risks & Rewards of Plastic Surgery</h1>
+                        <p>
+                            Plastic surgery is a range of procedures that reshapes or restores the form <br>
+                            of the body. Although the term is usually associated with beautification <br>
+                            procedures, it actually includes a broad range of practical operations <br>
+                            including reconstructive surgery, craniofacial surgery, burn treatment, and <br>
+                            more. Whatever the motivation, the decision to undergo surgery should <br>
+                            never be made lightly — one must always review the potential risks and rewards. <br><br>
+                            <img src="images/manwithmirror.webp">
+                        </p>
+                        
+                        <h1>Psychological and Social Risks of Plastic Surgery</h1>
+                        <p>
+                            To understand the psychological risks of plastic surgery, you must be able <br>
+                            to answer a few questions about yourself. For example, how will you feel if <br>
+                            your plastic surgery causes you to become a topic of gossip among your <br>
+                            social circle? What if your partner exhibits signs of jealousy or insecurity <br>
+                            because of your new look? What if you still feel “ugly” or inadequate after <br>
+                            your “problem” has been surgically corrected?
+                            <br> <br>
+                            The potential adverse psychological and social effects of plastic surgery <br>
+                            have a lot to do with a patient’s pre-operative expectations and their pre- <br>
+                            operative mental and emotional state. It’s important to understand that <br>
+                            while plastic surgery can bring positive rewards, it will not change your life, <br>
+                            the problems you have, or issues in your relationships. It is also important <br>
+                            to understand that there is no such thing as physical “perfection.”
+                        </p>
+                        <h2><a name="Body Dysmorphic Disorder"></a> Body Dysmorphic Disorder</h2>
+                        <p>
+                            For some people, plastic surgery is an opportunity to fix a perceived flaw <br>
+                            that has troubled them for years. The thinking goes, if we were only to get it <br>
+                            fixed, we would be that much more beautiful. <br>
+                            <br><br>
+                            However, people who strongly perceive imperfections within themselves <br>
+                            may suffer from body dysmorphic disorder (BDD).This psychological <br>
+                            disorder is characterized by an obsessive fixation on a perceived physical <br>
+                            flaw. It affects 1.7% to 2.9% of men and women equally, usually begins in <br>
+                            adolescence, and has been known to affect Hollywood actors and actresses <br>
+                            just as much as regular folk.
+                            <br><br>
+                            In many cases, people with BDD have undergone several plastic surgeries <br>
+                            but are chronically unhappy with the results. Ultimately, they wished they <br>
+                            had never undergone them at all. 
+                            <br><br>
+                            If you feel very strong negative emotions toward your physical <br>
+                            appearance, it's strongly advised you consult a physician or <br>
+                            psychologist about body dysmorphic disorder before pursuing a <br>
+                            solution with surgery.
+                        </p>
+                        <h2><a name="Health Risks"></a> Health Risks</h2>
+                        <p>
+                            As with any surgery, plastic surgery carries risks. People have had surgery <br>
+                            that has resulted in scars, disfigurement, or worse. While the worst <br>
+                            outcomes are rare, such risks are nonetheless a reality.
+                            <br> <br>
+                            While each type of surgery bears its own risks that are specific to that <br>
+                            particular procedure, certain risks are common to all surgical procedures. <br>
+                            These risks include:
+                            <br><br>
+
+                            <ul class="square">
+                            <li>Infection</li>
+                            <li>Excessive or unexpected bleeding (hemorrhage or hematoma)</li>
+                            <li>Blood clots</li>
+                            <li>Tissue death</li>
+                            <li>Delayed healing</li>
+                            <li>Anesthesia risks (including shock, respiratory failure, drug or allergic reactions, cardiac arrest, coma, death)</li>
+                            <li>Pneumonia</li>
+                            <li>Loss or change of sensation</li>
+                            <li>Need for secondary surgeries/dissatisfaction with results</li>
+                            <li>Paralysis or less severe nerve damage</li>
+                            </ul>
+                        </p>
+                        <p>Not every surgery is successful, and unlike most “medically necessary” <br>
+                            surgeries, the success of plastic surgery can be quite subjective. <br>
+                            Unsatisfactory aesthetic results (including contour irregularities, <br>
+                            asymmetry, excessive or unfavorable scarring, etc.) can be disheartening or <br>
+                            even devastating for some patients.
+                            <br><br>
+                            Worse yet, the unluckiest of patients can be left with persistent pain, <br>
+                            damage to vital tissues, or even nerve damage/localized paralysis.  <br>
+                        </p>
+                        <h2><a name="The Rewards of Plastic Surgery"></a> The Rewards of Plastic Surgery</h2>
+                        <p>
+                            <b>Psychological</b> <br> <br>
+                            For many patients, successful plastic surgery can lead to an increase in self-
+                            esteem and confidence. Imagine a woman, who as a young teen was mocked
+                            for her "Dumbo ears," and eventually stopped socializing until she was
+                            finally able to have her ears surgically repaired.
+                            <br><br>
+                            The correction of a "problem" perceived by the patient can make them less <br>
+                            self-conscious, and relieve social anxiety. It may make them more outgoing, <br>
+                            less vulnerable, and more willing to show off their new, flattering features. <br>
+                            This new confidence might show itself in many aspects of life – socially, <br>
+                            professionally, romantically. When you feel comfortable and confident in <br>
+                            your own skin, you will radiate these positive emotions in everything you do
+                            <br><br>
+                            In addition, some studies have shown that physical attractiveness correlates <br>
+                            with professional success, such as hiring decisions, promotions, and salary. <br>
+                            Some studies have shown that attractive people receive favorable <br>
+                            treatment in restaurants and retail establishments. If one works in an <br>
+                            appearance or youth-driven industry, plastic surgery to enhance a youthful <br>
+                            appearance may be a boon to one's career.
+                            <br><br>
+                            For many patients, successful plastic surgery can lead to an increase in self- <br>
+                            esteem and confidence. Imagine a woman, who as a young teen was mocked <br>
+                            for her "buck-toothed" smile, and eventually stopped smiling until she was <br>
+                            finally able to have her smile surgically removed.
+                            </p>
+                            <h1><a name="Health and Quality of Life"></a> Health and Quality of Life</h1>
+                            <p>
+                            In some cases, plastic surgery can yield distinct improvements in quality of <br>
+                            life. These typically apply to those whose surgeries are deemed medically <br>
+                            "practical." For the patient whose vision is improved dramatically by an <br>
+                            eyelid lift, which removes the hooded portion of the eyelid, the rewards <br>
+                            bring joy daily. For the patient who has a breast reduction and experiences <br>
+                            relief from long-standing daily pain, quality of life can increase <br>
+                            dramatically. For the patient who has 20 pounds of loose hanging skin after <br>
+                            weight loss removed from their body, it can mean feeling comfortable with <br>
+                            increased levels of physical activity.
+                            <br><br>
+                            For a breast cancer survivor who has had a single or double mastectomy, <br>
+                            breast reconstruction can restore their body image. For a patient who has <br>
+                            lived with an obviously visible disfigurement, reconstructive surgery can <br>
+                            make that person feel free again – able to face a world that is no longer <br>
+                            staring and live free from any judgment they experienced before. In many <br>
+                            cases, plastic surgery can be a tremendous life-changing event.
+                            <br><br>
+                            <h1><a name="Weighing the Risks Versus the Rewards"></a> Weighing the Risks Versus the Rewards</h1>
+                            <p>
+                                The potential rewards of plastic surgery are highly individual. Many plastic <br>
+                                surgery patients say their only regret is that they didn’t do it sooner. <br>
+                                <br><br>
+                                Yet, there are also many who wish they had never done it at all, or who at <br>
+                                least wish they had done more research or chosen a different surgeon. Of <br>
+                                course, risk can be mitigated by doing your homework and becoming a very <br>
+                                informed patient.
+                                <br><br>
+                                Do not let price be the foremost determining factor in choosing a <br>
+                                surgeon. Check credentials and references, ask lots of questions, and be <br>
+                                on the look-out for red flags.
+                                <br><br>
+                                Be sure that you go into surgery in the best health possible by taking care of <br>
+                                yourself, and don’t let your desire for the surgery overshadow any serious health considerations.
+                                <br><br>
+                                While the risks of plastic surgery do vary from one procedure to another, <br>
+                                certain risks are common to all surgery, and some of the risks are grave. <br>
+                                Only you can decide if it’s worth it for you. Educate yourself. Take into <br>
+                                account all the pros and cons. Talk it over with your loved ones.
+                                <br><br>
+                                If you decide to go for it, choose the best surgeon you can find. Follow their <br>
+                                preoperative and post-operative instructions to the letter. Then enjoy your <br>
+                                new look!
+                            </p>
+        </div>
+        <div class="threepic">
+            <img src="images/Physical pains.jpg" class="firstp">
+            <img src="images/Possible Allergic Reactions.jpg" class="possibleAllergic">
+            <img src="images/Body Dysmorphic Disorder.jpg" class="bodyDysmorphic">
+        </div>
+        <div class="sidebar">
+            <img src="images/search.png" class="search-icon">
+            <div class="socail-links">
+                <img src="images/fb.png">
+                <img src="images/pt.png">
+                <img src="images/tw.png">
+            </div>
+        </div>
+        <div class="footer">
+            <div class="bottom">
+                @official Plastic surgery || by ak
+                <img src="images/logo.png">
+            </div>
+            <div class="left">
+                <h1> <span>Q</span>uick  <span>L</span>inks</h1> <br><br><br>
+                <li><a href="HTMLPage1.html"> Home Page</li></a> <br>
+                <li><a href="about3.html"> About</li></a> <br>
+                <li><a href="Information.html">Information</li></a> <br>
+                <li><a href="contact us.html">Contact us</li></a>
+            </div>
+        </div>
+    </div>
+    
+    <a href="#top" class="gotopbtn"><i class="fas fa-arrow-up"></i></a>
+
+</body>
+</html>
